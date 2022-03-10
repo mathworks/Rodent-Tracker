@@ -2,15 +2,9 @@
 
 [![View <File Exchange Title> on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/####-file-exchange-title)  
 
-![Alt-Text](Rodent Tracker_resources/RodentTrackerApp.png)
+![Alt-Text](https://github.com/mathworks/Rodent-Tracker/blob/main/Rodent%20Tracker_resources/RodentTrackerApp.png?raw=true)
 
 ## Setup 
-
-1. Run Rodent Tracker.mltbx to install toolbox
-2. Select the Rodent Tracker under the Apps tab wihin MATLAB
-
-or
-
 
 1. Run Rodent Tracker.mlappinstall to install the app
 2. Select the Rodent Tracker under the Apps tab wihin MATLAB
