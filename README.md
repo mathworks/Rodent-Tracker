@@ -15,7 +15,7 @@ or
 2. Run RodentTracker.mlapp
 
 
-### MathWorks Products (http://www.mathworks.com)
+### MathWorks Products (https://www.mathworks.com)
 
 Requires MATLAB release R2021b or newer
 - [Image Processing Toolbox&trade;](https://www.mathworks.com/products/image.html)
