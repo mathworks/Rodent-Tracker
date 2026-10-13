@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<MATLABApp schemaVersion='1.0.0' release='R2026b.0' minRelease='R2026b'>
+    <UIFigure name='RodentTrackerAnalysisPreviewUIFigure'>
+        <CloseRequestFcn>RodentTrackerAnalysisPreviewUIFigureCloseRequest</CloseRequestFcn>
+        <HandleVisibility>'on'</HandleVisibility>
+        <Icon>'RodentTrackerIcon.png'</Icon>
+        <Name>'Rodent Tracker: Analysis Preview'</Name>
+        <Position>[100 100 613 506]</Position>
+        <Children>
+            <Menu name='FileMenu'>
+                <Text>'File'</Text>
+                <Children>
+                    <Menu name='SaveasMenu'>
+                        <MenuSelectedFcn>SaveasMenuSelected</MenuSelectedFcn>
+                        <Text>'Save as...'</Text>
+                    </Menu>
+                </Children>
+            </Menu>
+            <Menu name='EditMenu'>
+                <Text>'Edit'</Text>
+                <Children>
+                    <Menu name='EllipseMenu'>
+                        <Text>'Ellipse'</Text>
+                        <Children>
+                            <Menu name='EllipseColor'>
+                                <MenuSelectedFcn>EllipseColorMenuSelected</MenuSelectedFcn>
+                                <Text>'Color'</Text>
+                            </Menu>
+                        </Children>
+                    </Menu>
+                    <Menu name='CentroidMenu'>
+                        <Text>'Centroid'</Text>
+                        <Children>
+                            <Menu name='CentroidColor'>
+                                <MenuSelectedFcn>CentroidColorMenuSelected</MenuSelectedFcn>
+                                <Text>'Color'</Text>
+                            </Menu>
+                        </Children>
+                    </Menu>
+                    <Menu name='TailpointMenu'>
+                        <Text>'Tail point'</Text>
+                        <Children>
+                            <Menu name='TailpointColor'>
+                                <MenuSelectedFcn>TailpointColorMenuSelected</MenuSelectedFcn>
+                                <Text>'Color'</Text>
+                            </Menu>
+                        </Children>
+                    </Menu>
+                    <Menu name='HeadpointMenu'>
+                        <Text>'Head point'</Text>
+                        <Children>
+                            <Menu name='HeadpointColor'>
+                                <MenuSelectedFcn>HeadpointColorMenuSelected</MenuSelectedFcn>
+                                <Text>'Color'</Text>
+                            </Menu>
+                        </Children>
+                    </Menu>
+                </Children>
+            </Menu>
+            <Menu name='ViewMenu'>
+                <Text>'View'</Text>
+                <Children>
+                    <Menu name='ROISelectorMenu'>
+                        <MenuSelectedFcn>ROISelectorMenuSelected</MenuSelectedFcn>
+                        <Text>'ROI Selector'</Text>
+                    </Menu>
+                </Children>
+            </Menu>
+            <GridLayout name='GridLayout'>
+                <ColumnWidth>{'7.24x', 0, '7.24x'}</ColumnWidth>
+                <Padding>[10 5.33333333333333 10 5.33333333333333]</Padding>
+                <RowSpacing>5.33333333333333</RowSpacing>
+                <Children>
+                    <UIAxes name='RawAxes'>
+                        <Layout>
+                            <Column>1</Column>
+                            <Row>1</Row>
+                        </Layout>
+                        <Title>
+                            <String>'Original Video'</String>
+                        </Title>
+                        <Toolbar>
+                            <Visible>'off'</Visible>
+                        </Toolbar>
+                        <ZLabel>
+                            <String>'Z'</String>
+                        </ZLabel>
+                    </UIAxes>
+                    <UIAxes name='BinaryAxes'>
+                        <Layout>
+                            <Column>3</Column>
+                            <Row>1</Row>
+                        </Layout>
+                        <Title>
+                            <String>'Binary Video'</String>
+                        </Title>
+                        <Toolbar>
+                            <Visible>'off'</Visible>
+                        </Toolbar>
+                        <ZLabel>
+                            <String>'Z'</String>
+                        </ZLabel>
+                    </UIAxes>
+                    <UIAxes name='NoTailAxes'>
+                        <Layout>
+                            <Column>1</Column>
+                            <Row>2</Row>
+                        </Layout>
+                        <Title>
+                            <String>'Remove Tail'</String>
+                        </Title>
+                        <Toolbar>
+                            <Visible>'off'</Visible>
+                        </Toolbar>
+                        <ZLabel>
+                            <String>'Z'</String>
+                        </ZLabel>
+                    </UIAxes>
+                    <UIAxes name='EllipseAxes'>
+                        <Layout>
+                            <Column>3</Column>
+                            <Row>2</Row>
+                        </Layout>
+                        <Title>
+                            <String>'Draw Ellipse'</String>
+                        </Title>
+                        <Toolbar>
+                            <Visible>'off'</Visible>
+                        </Toolbar>
+                        <ZLabel>
+                            <String>'Z'</String>
+                        </ZLabel>
+                    </UIAxes>
+                </Children>
+            </GridLayout>
+        </Children>
+    </UIFigure>
+    <RunConfiguration>
+        <StartupFcn>startupFcn</StartupFcn>
+    </RunConfiguration>
+    <AppDetails>
+        <Name>Rodent Tracker: Analysis Preview</Name>
+        <Version>1.0</Version>
+    </AppDetails>
+    <InternalData>
+        <AppId>9b9ddf36-688e-4217-96e9-84ad81d542fd</AppId>
+    </InternalData>
+    <!-- Thumbnail is used by file previewers. To change how the thumbnail is captured or stored, use the App Details dialog box in App Designer. -->
+    <Thumbnail autoCapture='true'>data:image/jpg;base64,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</Thumbnail>
+</MATLABApp>

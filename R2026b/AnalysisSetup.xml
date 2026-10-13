@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<MATLABApp schemaVersion='1.0.0' release='R2026b.0' minRelease='R2026b'>
+    <UIFigure name='AnalysisVideoSettingsUIFigure'>
+        <Icon>'RodentTrackerIcon.png'</Icon>
+        <Name>'Analysis Video Settings'</Name>
+        <Position>[100 100 340 248]</Position>
+        <Children>
+            <CheckBox name='SaveTrackerVideoCheckBox'>
+                <Position>[191 212 133 22]</Position>
+                <Text>'Save Tracker Video?'</Text>
+                <Tooltip>'The tracker video comprises of the raw video overlayed by the calculated ellipse around the detected rodent.'</Tooltip>
+                <ValueChangedFcn>SaveTrackerVideoCheckBoxValueChanged</ValueChangedFcn>
+            </CheckBox>
+            <CheckBox name='SaveTraceVideoCheckBox'>
+                <Position>[191 99 123 22]</Position>
+                <Text>'Save Trace Video?'</Text>
+                <Tooltip>'The trace video comprises of white centriod points of the detected rodent over a black background.'</Tooltip>
+                <ValueChangedFcn>SaveTraceVideoCheckBoxValueChanged</ValueChangedFcn>
+            </CheckBox>
+            <EditField name='SaveDirectoryTracker'>
+                <Editable>'off'</Editable>
+                <Position>[13 169 284 22]</Position>
+            </EditField>
+            <EditField name='SaveDirectoryTrace'>
+                <Editable>'off'</Editable>
+                <Position>[13 57 284 22]</Position>
+            </EditField>
+            <Button name='SaveDir_Tracker'>
+                <ButtonPushedFcn>SaveDir_TrackerButtonPushed</ButtonPushedFcn>
+                <Icon>'file_open.png'</Icon>
+                <IconAlignment>'center'</IconAlignment>
+                <Position>[300 169 24 23]</Position>
+                <Text>{''; ''}</Text>
+                <Tooltip>'This button loads the save directory of the tracker video that will be saved. The tracker video comprises of the raw video overlayed by the calculated ellipse around the detected rodent.'</Tooltip>
+            </Button>
+            <Button name='SaveDir_Trace'>
+                <ButtonPushedFcn>SaveDir_TraceButtonPushed</ButtonPushedFcn>
+                <Icon>'file_open.png'</Icon>
+                <IconAlignment>'center'</IconAlignment>
+                <Position>[300 57 24 23]</Position>
+                <Text>{''; ''}</Text>
+                <Tooltip>'The trace video comprises of white centriod points of the detected rodent over a black background.'</Tooltip>
+            </Button>
+            <Label name='TraceVideoSaveDirectoryLabel'>
+                <FontWeight>'bold'</FontWeight>
+                <Position>[13 78 163 22]</Position>
+                <Text>'Trace  Video Save Directory'</Text>
+                <Tooltip>'The trace video comprises of white centriod points of the detected rodent over a black background.'</Tooltip>
+            </Label>
+            <Label name='TrackerVideoSaveDirectoryLabel'>
+                <FontWeight>'bold'</FontWeight>
+                <Position>[13 191 171 22]</Position>
+                <Text>'Tracker Video Save Directory'</Text>
+                <Tooltip>'The tracker video comprises of the raw video overlayed by the calculated ellipse around the detected rodent.'</Tooltip>
+            </Label>
+            <Button name='AnalyzeButton'>
+                <ButtonPushedFcn>AnalyzeButtonPushed</ButtonPushedFcn>
+                <Position>[240 15 84 22]</Position>
+                <Text>'Analyze'</Text>
+                <Tooltip>'Start the analysis with the selected options.'</Tooltip>
+            </Button>
+            <Label name='FPSEditField_Trace_Label'>
+                <Enable>'off'</Enable>
+                <HorizontalAlignment>'right'</HorizontalAlignment>
+                <Position>[13 27 29 22]</Position>
+                <Text>'FPS'</Text>
+            </Label>
+            <NumericEditField name='FPSEditField_Trace' label='FPSEditField_Trace_Label'>
+                <Enable>'off'</Enable>
+                <Position>[57 27 52 22]</Position>
+                <Value>10</Value>
+            </NumericEditField>
+            <Label name='FPSEditField_Tracker_Label'>
+                <Enable>'off'</Enable>
+                <HorizontalAlignment>'right'</HorizontalAlignment>
+                <Position>[13 139 29 22]</Position>
+                <Text>'FPS'</Text>
+            </Label>
+            <NumericEditField name='FPSEditField_Tracker' label='FPSEditField_Tracker_Label'>
+                <Enable>'off'</Enable>
+                <Position>[57 139 52 22]</Position>
+                <Value>10</Value>
+            </NumericEditField>
+            <Label name='TrackerFilenameEditFieldLabel'>
+                <Enable>'off'</Enable>
+                <HorizontalAlignment>'right'</HorizontalAlignment>
+                <Position>[10 212 58 22]</Position>
+                <Text>'Filename:'</Text>
+            </Label>
+            <EditField name='TrackerFilenameEditField' label='TrackerFilenameEditFieldLabel'>
+                <Enable>'off'</Enable>
+                <Position>[83 212 100 22]</Position>
+                <Value>'RodentTracker'</Value>
+            </EditField>
+            <Label name='TraceFilenameEditFieldLabel'>
+                <Enable>'off'</Enable>
+                <HorizontalAlignment>'right'</HorizontalAlignment>
+                <Position>[10 99 58 22]</Position>
+                <Text>'Filename:'</Text>
+            </Label>
+            <EditField name='TraceFilenameEditField' label='TraceFilenameEditFieldLabel'>
+                <Enable>'off'</Enable>
+                <Position>[83 99 100 22]</Position>
+                <Value>'RodentTrace'</Value>
+            </EditField>
+        </Children>
+    </UIFigure>
+    <RunConfiguration>
+        <StartupFcn>startupFcn</StartupFcn>
+    </RunConfiguration>
+    <AppDetails>
+        <Name>Analysis Video Settings</Name>
+        <Version>1.0</Version>
+    </AppDetails>
+    <InternalData>
+        <AppId>8b0d7c9b-f27a-45fd-91c1-7dd6617e0167</AppId>
+    </InternalData>
+    <!-- Thumbnail is used by file previewers. To change how the thumbnail is captured or stored, use the App Details dialog box in App Designer. -->
+    <Thumbnail autoCapture='true'>data:image/jpg;base64,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</Thumbnail>
+</MATLABApp>

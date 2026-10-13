@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<MATLABApp schemaVersion='1.0.0' release='R2026b.0' minRelease='R2026b'>
+    <UIFigure name='RodentTrackerSAPDetectionUIFigure'>
+        <CloseRequestFcn>RodentTrackerSAPDetectionUIFigureCloseRequest</CloseRequestFcn>
+        <Icon>'RodentTrackerIcon.png'</Icon>
+        <Name>'RodentTracker: SAP Detection'</Name>
+        <Position>[100 100 640 608]</Position>
+        <Children>
+            <Menu name='FileMenu'>
+                <Text>'File'</Text>
+                <Children>
+                    <Menu name='SaveStatsMenu'>
+                        <MenuSelectedFcn>SaveStatsMenuSelected</MenuSelectedFcn>
+                        <Text>'Save Stats..'</Text>
+                    </Menu>
+                </Children>
+            </Menu>
+            <GridLayout name='GridLayout'>
+                <ColumnWidth>{'1x', 133, '0.5x', '0.5x'}</ColumnWidth>
+                <RowHeight>{'7.05x', '0.3x', '11.3x', 'fit', 22, 18, '0.1x', 'fit', 18, '1.57x', 22}</RowHeight>
+                <Children>
+                    <UIAxes name='UIAxes'>
+                        <Layout>
+                            <Column>[1 4]</Column>
+                            <Row>3</Row>
+                        </Layout>
+                        <Title>
+                            <String>'SAP Detection'</String>
+                        </Title>
+                        <Toolbar>
+                            <Visible>'off'</Visible>
+                        </Toolbar>
+                        <XLabel>
+                            <String>'Time (frames)'</String>
+                        </XLabel>
+                    </UIAxes>
+                    <Button name='CalculateButton'>
+                        <ButtonPushedFcn>CalculateButtonPushed</ButtonPushedFcn>
+                        <Layout>
+                            <Column>4</Column>
+                            <Row>11</Row>
+                        </Layout>
+                        <Text>'Calculate'</Text>
+                    </Button>
+                    <Button name='LoadGroundTruthButton'>
+                        <ButtonPushedFcn>LoadGroundTruthButtonPushed</ButtonPushedFcn>
+                        <Layout>
+                            <Column>3</Column>
+                            <Row>11</Row>
+                        </Layout>
+                        <Text>'Load Ground Truth'</Text>
+                    </Button>
+                    <Table name='UItable'>
+                        <ColumnName>{'TP'; 'TN'; 'FP'; 'FN'; 'Sensitivity'; 'Specificity'; 'Accuracy'; 'MCC'; 'Fscore'}</ColumnName>
+                        <Layout>
+                            <Column>[1 4]</Column>
+                            <Row>1</Row>
+                        </Layout>
+                        <RowName>{}</RowName>
+                    </Table>
+                    <Slider name='EccentricityThresholdSlider' label='EccentricityThresholdSliderLabel'>
+                        <Layout>
+                            <Column>[1 4]</Column>
+                            <Row>[5 6]</Row>
+                        </Layout>
+                        <Limits>[0 1]</Limits>
+                        <Value>0.9</Value>
+                    </Slider>
+                    <Label name='EccentricityThresholdSliderLabel'>
+                        <HorizontalAlignment>'right'</HorizontalAlignment>
+                        <Layout>
+                            <Column>2</Column>
+                            <Row>4</Row>
+                        </Layout>
+                        <Text>'Eccentricity Threshold'</Text>
+                    </Label>
+                    <Label name='SpeedThresholdcmsSliderLabel'>
+                        <HorizontalAlignment>'right'</HorizontalAlignment>
+                        <Layout>
+                            <Column>2</Column>
+                            <Row>8</Row>
+                        </Layout>
+                        <Text>'Speed Threshold (cm/s)'</Text>
+                    </Label>
+                    <Slider name='SpeedThresholdcmsSlider' label='SpeedThresholdcmsSliderLabel'>
+                        <Layout>
+                            <Column>[1 4]</Column>
+                            <Row>[9 10]</Row>
+                        </Layout>
+                        <Value>12</Value>
+                    </Slider>
+                </Children>
+            </GridLayout>
+        </Children>
+    </UIFigure>
+    <RunConfiguration>
+        <StartupFcn>startupFcn</StartupFcn>
+    </RunConfiguration>
+    <AppDetails>
+        <Name>RodentTracker: SAP Detection</Name>
+        <Version>1.0</Version>
+    </AppDetails>
+    <InternalData>
+        <AppId>bdcd0033-46a2-4cc3-8ce6-3356555163a4</AppId>
+    </InternalData>
+    <!-- Thumbnail is used by file previewers. To change how the thumbnail is captured or stored, use the App Details dialog box in App Designer. -->
+    <Thumbnail autoCapture='true'></Thumbnail>
+</MATLABApp>

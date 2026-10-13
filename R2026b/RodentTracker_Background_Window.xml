@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<MATLABApp schemaVersion='1.0.0' release='R2026b.0' minRelease='R2026b'>
+    <UIFigure name='BackgroundUIFigure'>
+        <CloseRequestFcn>BackgroundUIFigureCloseRequest</CloseRequestFcn>
+        <Icon>'RodentTrackerIcon.png'</Icon>
+        <Name>'Background'</Name>
+        <Position>[100 100 538 423]</Position>
+        <Children>
+            <UIAxes name='UIAxes'>
+                <Position>[2 -6 528 436]</Position>
+                <Toolbar>
+                    <Visible>'off'</Visible>
+                </Toolbar>
+            </UIAxes>
+        </Children>
+    </UIFigure>
+    <RunConfiguration>
+        <StartupFcn>startupFcn</StartupFcn>
+    </RunConfiguration>
+    <AppDetails>
+        <Name>Background</Name>
+        <Version>1.0</Version>
+    </AppDetails>
+    <InternalData>
+        <AppId>3dee34c5-56b6-456c-8f32-fc190918203a</AppId>
+    </InternalData>
+    <!-- Thumbnail is used by file previewers. To change how the thumbnail is captured or stored, use the App Details dialog box in App Designer. -->
+    <Thumbnail autoCapture='true'>data:image/jpg;base64,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</Thumbnail>
+</MATLABApp>

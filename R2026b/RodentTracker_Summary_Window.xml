@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<MATLABApp schemaVersion='1.0.0' release='R2026b.0' minRelease='R2026b'>
+    <UIFigure name='RodentTrackerSummaryUIFigure'>
+        <Icon>'RodentTrackerIcon.png'</Icon>
+        <Name>'Rodent Tracker: Summary'</Name>
+        <Position>[100 100 447 361]</Position>
+        <Children>
+            <Label name='TimeSpentsLabel'>
+                <FontSize>18</FontSize>
+                <Position>[17 275 128 23]</Position>
+                <Text>'Time Spent (s):'</Text>
+            </Label>
+            <Label name='NumberofEntriesLabel'>
+                <FontSize>18</FontSize>
+                <Position>[17 176 156 23]</Position>
+                <Text>'Number of Entries:'</Text>
+            </Label>
+            <Label name='NumberofExitsLabel'>
+                <FontSize>18</FontSize>
+                <Position>[17 142 139 23]</Position>
+                <Text>'Number of Exits:'</Text>
+            </Label>
+            <Label name='EccentricityLabel'>
+                <FontSize>18</FontSize>
+                <Position>[17 83 103 23]</Position>
+                <Text>'Eccentricity:'</Text>
+            </Label>
+            <Label name='SpeedunitsLabel'>
+                <FontSize>18</FontSize>
+                <Position>[17 47 123 23]</Position>
+                <Text>'Speed (unit/s):'</Text>
+            </Label>
+            <Label name='TimeSpentLabel'>
+                <FontSize>18</FontSize>
+                <Position>[19 240 135 23]</Position>
+                <Text>'Time Spent (%):'</Text>
+            </Label>
+            <Label name='FilenameLabel'>
+                <FontSize>18</FontSize>
+                <Position>[18 325 85 23]</Position>
+                <Text>'Filename:'</Text>
+            </Label>
+        </Children>
+    </UIFigure>
+    <RunConfiguration>
+        <StartupFcn>startupFcn</StartupFcn>
+    </RunConfiguration>
+    <AppDetails>
+        <Name>Rodent Tracker: Summary</Name>
+        <Version>1.0</Version>
+    </AppDetails>
+    <InternalData>
+        <AppId>b8900da4-cc7f-41c4-82bd-050172be1d8b</AppId>
+    </InternalData>
+    <!-- Thumbnail is used by file previewers. To change how the thumbnail is captured or stored, use the App Details dialog box in App Designer. -->
+    <Thumbnail autoCapture='true'>data:image/jpg;base64,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</Thumbnail>
+</MATLABApp>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<MATLABApp schemaVersion='1.0.0' release='R2026b.0' minRelease='R2026b'>
+    <UIFigure name='RodentTrackerSpreadsheetUIFigure'>
+        <CloseRequestFcn>RodentTrackerSpreadsheetUIFigureCloseRequest</CloseRequestFcn>
+        <HandleVisibility>'on'</HandleVisibility>
+        <Icon>'RodentTrackerIcon.png'</Icon>
+        <Name>'Rodent Tracker: Spreadsheet'</Name>
+        <Position>[100 100 640 480]</Position>
+        <Children>
+            <Menu name='FileMenu'>
+                <Text>'File'</Text>
+                <Children>
+                    <Menu name='SaveasMenu'>
+                        <MenuSelectedFcn>SaveasMenuSelected</MenuSelectedFcn>
+                        <Text>'Save as...'</Text>
+                    </Menu>
+                </Children>
+            </Menu>
+            <Menu name='AnalyzeMenu'>
+                <Text>'Analyze'</Text>
+                <Children>
+                    <Menu name='SAPMenu'>
+                        <MenuSelectedFcn>SAPMenuSelected</MenuSelectedFcn>
+                        <Text>'SAP'</Text>
+                    </Menu>
+                </Children>
+            </Menu>
+            <Table name='UITable'>
+                <ColumnName>''</ColumnName>
+                <Position>[1 1 640 480]</Position>
+                <RowName>{}</RowName>
+            </Table>
+        </Children>
+    </UIFigure>
+    <RunConfiguration>
+        <StartupFcn>startupFcn</StartupFcn>
+    </RunConfiguration>
+    <AppDetails>
+        <Name>Rodent Tracker: Spreadsheet</Name>
+        <Version>1.0</Version>
+    </AppDetails>
+    <InternalData>
+        <AppId>0d0f05f6-1939-4ca7-bc9e-ea6a927edc97</AppId>
+    </InternalData>
+    <!-- Thumbnail is used by file previewers. To change how the thumbnail is captured or stored, use the App Details dialog box in App Designer. -->
+    <Thumbnail autoCapture='true'>data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAClAKUDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3q2/49Yf9xf5VLUVt/wAesP8AuL/KpaACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCK2/49Yf9xf5VLUVt/x6w/7i/wAqloAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAIrb/AI9Yf9xf5VLUVt/x6w/7i/yqWgAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAitv+PWH/AHF/lUtRW3/HrD/uL/KpaACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCK2/49Yf9xf5VLUVt/wAesP8AuL/KpaACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCK2/49Yf9xf5VLUVt/x6w/7i/wAqloAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAIrb/AI9Yf9xf5VLUVt/x6w/7i/yqWgAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAitv+PWH/AHF/lUtRW3/HrD/uL/KpaACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCK2/49Yf9xf5VLUVt/wAesP8AuL/KpaACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCK2/49Yf9xf5VLUVt/x6w/7i/wAqloAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAMeDV9tvEvkdEA+/7fSpP7Y/6Yf8Aj/8A9aiigA/tj/ph/wCP/wD1qP7Y/wCmH/j/AP8AWoooAP7Y/wCmH/j/AP8AWo/tj/ph/wCP/wD1qKKAD+2P+mH/AI//APWo/tj/AKYf+P8A/wBaiigA/tj/AKYf+P8A/wBaj+2P+mH/AI//APWoooAP7Y/6Yf8Aj/8A9aj+2P8Aph/4/wD/AFqKKAD+2P8Aph/4/wD/AFqP7Y/6Yf8Aj/8A9aiigA/tj/ph/wCP/wD1qP7Y/wCmH/j/AP8AWoooAP7Y/wCmH/j/AP8AWo/tj/ph/wCP/wD1qKKAD+2P+mH/AI//APWo/tj/AKYf+P8A/wBaiigA/tj/AKYf+P8A/wBaiiigD//Z</Thumbnail>
+</MATLABApp>

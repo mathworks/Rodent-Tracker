@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<MATLABApp schemaVersion='1.0.0' release='R2026b.0' minRelease='R2026b'>
+    <UIFigure name='RodentTrackerRegionofInterestSelectionUIFigure'>
+        <CloseRequestFcn>RodentTrackerRegionofInterestSelectionUIFigureCloseRequest</CloseRequestFcn>
+        <Icon>'RodentTrackerIcon.png'</Icon>
+        <Name>'Rodent Tracker: Region of Interest Selection'</Name>
+        <Position>[100 100 640 891]</Position>
+        <Children>
+            <Menu name='FileMenu'>
+                <Text>'File'</Text>
+                <Children>
+                    <Menu name='CreateNewROIMenu'>
+                        <MenuSelectedFcn>CreateNewROIMenuSelected</MenuSelectedFcn>
+                        <Text>'Create New ROI'</Text>
+                    </Menu>
+                    <Menu name='DeleteSelectedROIsMenu'>
+                        <MenuSelectedFcn>DeleteSelectedROIsMenuSelected</MenuSelectedFcn>
+                        <Text>'Delete Selected ROIs'</Text>
+                    </Menu>
+                </Children>
+            </Menu>
+            <Menu name='SetupMenu'>
+                <Text>'Setup'</Text>
+                <Children>
+                    <Menu name='OpenFieldMenu'>
+                        <MenuSelectedFcn>OpenFieldMenuSelected</MenuSelectedFcn>
+                        <Text>'Open Field'</Text>
+                    </Menu>
+                    <Menu name='ElevatedPlusMazeMenu'>
+                        <MenuSelectedFcn>ElevatedPlusMazeMenuSelected</MenuSelectedFcn>
+                        <Text>'Elevated Plus Maze'</Text>
+                    </Menu>
+                </Children>
+            </Menu>
+            <Menu name='EditMenu'>
+                <Text>'Edit'</Text>
+                <Visible>'off'</Visible>
+            </Menu>
+            <GridLayout name='GridLayout'>
+                <ColumnSpacing>1.4</ColumnSpacing>
+                <ColumnWidth>{'fit', '1x', 100, '0.3x', 175, '0.3x'}</ColumnWidth>
+                <Padding>[1.4 9.42857142857143 1.4 9.42857142857143]</Padding>
+                <RowHeight>{'2x', 35, 57, 30, '1x', 22}</RowHeight>
+                <RowSpacing>9.42857142857143</RowSpacing>
+                <Children>
+                    <UIAxes name='UIAxes'>
+                        <Layout>
+                            <Column>[1 5]</Column>
+                            <Row>1</Row>
+                        </Layout>
+                        <Toolbar>
+                            <Visible>'off'</Visible>
+                        </Toolbar>
+                    </UIAxes>
+                    <Button name='SelectROIButton'>
+                        <ButtonPushedFcn>SelectROIButtonPushed</ButtonPushedFcn>
+                        <FontSize>14</FontSize>
+                        <Layout>
+                            <Column>1</Column>
+                            <Row>3</Row>
+                        </Layout>
+                        <Text>'Select ROI'</Text>
+                    </Button>
+                    <Table name='UITable'>
+                        <BackgroundColor>[1 1 1;0.9412 0.9412 0.9412]</BackgroundColor>
+                        <CellSelectionCallback>UITableCellSelection</CellSelectionCallback>
+                        <ColumnEditable>true</ColumnEditable>
+                        <ColumnName>{'Select'; 'Visible'; 'Editable'; 'ROI'; 'Color'; 'x'; 'y'; 'width'; 'height'}</ColumnName>
+                        <ColumnWidth>{'auto', 'auto', 'auto', 50, 50, 'auto', 'auto'}</ColumnWidth>
+                        <DisplayDataChangedFcn>UITableDisplayDataChanged</DisplayDataChangedFcn>
+                        <Layout>
+                            <Column>[1 6]</Column>
+                            <Row>5</Row>
+                        </Layout>
+                        <RowName>{}</RowName>
+                    </Table>
+                    <Panel name='GridPanel'>
+                        <Layout>
+                            <Column>5</Column>
+                            <Row>[2 4]</Row>
+                        </Layout>
+                        <Title>'Grid'</Title>
+                        <Children>
+                            <Label name='widthEditFieldLabel'>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Position>[112 87 44 22]</Position>
+                                <Text>'width'</Text>
+                                <VerticalAlignment>'bottom'</VerticalAlignment>
+                            </Label>
+                            <NumericEditField name='widthEditField' label='widthEditFieldLabel'>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Position>[111 64 46 22]</Position>
+                                <Value>4</Value>
+                            </NumericEditField>
+                            <Label name='heightEditFieldLabel'>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Position>[112 38 44 22]</Position>
+                                <Text>'height'</Text>
+                                <VerticalAlignment>'bottom'</VerticalAlignment>
+                            </Label>
+                            <NumericEditField name='heightEditField' label='heightEditFieldLabel'>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Position>[111 12 46 22]</Position>
+                                <Value>4</Value>
+                            </NumericEditField>
+                            <Button name='GenerateROIsButton'>
+                                <ButtonPushedFcn>GenerateROIsButtonPushed</ButtonPushedFcn>
+                                <Position>[12 59 90 55]</Position>
+                                <Text>'Generate ROIs'</Text>
+                            </Button>
+                            <Label name='ColormapDropDownLabel'>
+                                <Position>[12 26 100 22]</Position>
+                                <Text>'Colormap:'</Text>
+                            </Label>
+                            <DropDown name='ColormapDropDown' label='ColormapDropDownLabel'>
+                                <Items>{'jet', 'parula', 'turbo', 'hsv', 'hot', 'cool', 'spring', 'summer', 'autum', 'winter', 'gray', 'bone', 'copper', 'pink', 'lines', 'colorcube', 'prism', 'flag'}</Items>
+                                <Position>[12 6 90 22]</Position>
+                                <Value>'jet'</Value>
+                            </DropDown>
+                        </Children>
+                    </Panel>
+                    <Button name='CombineButton'>
+                        <ButtonPushedFcn>CombineButtonPushed</ButtonPushedFcn>
+                        <Enable>'off'</Enable>
+                        <Layout>
+                            <Column>1</Column>
+                            <Row>6</Row>
+                        </Layout>
+                        <Text>'Combine'</Text>
+                    </Button>
+                    <Panel name='SpecificSetupPanel'>
+                        <Layout>
+                            <Column>3</Column>
+                            <Row>[2 4]</Row>
+                        </Layout>
+                        <Title>'Specific Setup'</Title>
+                        <Children>
+                            <Button name='EPMButton'>
+                                <ButtonPushedFcn>EPMButtonPushed</ButtonPushedFcn>
+                                <Position>[10 93 79 22]</Position>
+                                <Text>'EPM'</Text>
+                            </Button>
+                            <Button name='OFButton'>
+                                <ButtonPushedFcn>OFButtonPushed</ButtonPushedFcn>
+                                <Position>[10 59 79 22]</Position>
+                                <Text>'OF'</Text>
+                            </Button>
+                        </Children>
+                    </Panel>
+                </Children>
+            </GridLayout>
+        </Children>
+    </UIFigure>
+    <RunConfiguration>
+        <StartupFcn>startupFcn</StartupFcn>
+    </RunConfiguration>
+    <AppDetails>
+        <Name>Rodent Tracker: Region of Interest Selection</Name>
+        <Version>1.0</Version>
+    </AppDetails>
+    <InternalData>
+        <AppId>b3d13c5a-836f-4150-9bef-48ab8b338a1c</AppId>
+    </InternalData>
+    <!-- Thumbnail is used by file previewers. To change how the thumbnail is captured or stored, use the App Details dialog box in App Designer. -->
+    <Thumbnail autoCapture='true'>data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAC4ANwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAhnuobYjzm2KVZi5+6AMZyfxqaMGWNZEBZGGQcdRVLVwP7KuDjkL/UVuUAUvLf+6fyo8t/7p/KrtFAFLy3/un8qPLf+6fyq7RQBS8t/wC6fyo8t/7p/KrtFAFLy3/un8qPLf8Aun8qu0UAUvLf+6fyo8t/7p/KrtFAFLy3/un8qPLf+6fyq7RQBS8t/wC6fyo8t/7p/KrtFAFLy3/un8qPLf8Aun8qu0UAUvLf+6fyo8t/7p/KrtFAFLy3/un8qPLf+6fyq7RQBS8t/wC6fyo8t/7p/KrtFAFLy3/un8qPLf8Aun8qu0UAUijgZKnFNq5L/qm+lU6AMLUL28k06RXsWUMjljyNpBGOvrXVRszRqzpsYjlc5wfrWLq3/IJuf93+orcoAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAZL/AKpvpVOrkv8Aqm+lU6AMLUIdTGnSebcRlBG+/vkkjacYHSuqjDiNRIwZwPmYDAJ+lYurf8gq5/3f6itygAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBkv+qb6VTq5L/qm+lU6AMW/0yGDSJhuZyiOFJ4I3EZ5HP8A+uunRBHGqKWIUYG5ix/Enk1zuqX9rJpc4WdCWQsPopGTXRI6yIHRgysMhlOQRQA6iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAGS/6pvpVOrkv+qb6VToAy9TsbWLTJmSFQyqdp9MnmujAAGAMAdq5TUNTM2myqbWRQ6OTzkjaRxj3/APrV1Mb+ZGr7WXcM4YYI+tADqKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAZL/qm+lU6uS/6pvpVOgCnq3/ACCbn/d/qK265TUG1P8AsuQSxw42v5h3Y7jZjHaupjLmNTIFD4+YKcgH2NADqKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAZL/qm+lU6uS/6pvpVOgCnq3/ACCbn/d/qK265XULCaLSpM3bNsV+cHJ3EY6kjjrXUIpSNVZ2cgYLNjJ9+OKAHUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAyX/AFTfSqdXJf8AVN9Kp0AZ2qXEL6XOqTRsWU7QGBzgjOPpXQVzOpadbxaVPtD7VRgFLEj5iM8fpXSRxpFGscahUUYAHYUAOooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBkv+qb6VTq5L/qm+lU6AMjUNRt59HmZd4VkY5K9NpGc/nXSRyLLGsiHcjDIPqKxNVRF0m52oo+XsMdxW7QAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAyX/VN9Kp1cl/1TfSqdAGbqzTtC1vHGuySNiZHbaqkdAT0H/16u/2le/8AQMP/AIELRcW8d1bvDLnY3XBwfWpFAVQoGABgUAR/2je/9Aw/+BC1ENWvjcEfYIzFjbgXK7t/cfljirVVksYI5GkAO5pfN5PRuen5mgCT+0b3/oGH/wACFpH1S7jUs+nBVHUtcIBU1Q3NtHdwNDLnY2M4ODQAyDVL9olEmno0ygCTy7hcBsc/SpP7Rvf+gYf/AAIWiG3WBpCrMxkbcSxz2xj6VLQBUl1e9SVALGJVXmUPcrkKQQMfjjrU39o3v/QMP/gQtRT6fBPJLI+8NLH5bYP8P+cVaoAiOpXoGTpuAP8Ap4WoodVv2zusI23EtHsuF5TsasOiyRtG3KsCp+hqnBp8cF2DASrrBs3MS2V3ZxjIHXv70AWf7Rvf+gYf/Ahajn1TUFVVj0+NZGYBQ9wvIzzj3xmqk2sW1vcSwTXWySM4wYT83GeOenvUf2my1KS3eO7MpV/kZIGwDgnk9P4c0AaSapdyIHTTgynoy3CEGl/tG9/6Bh/8CFrIstTtIrBfIlfyIhyfKB2AnjOGxyTjA6dOK2CJI3jDOrBzjhcY4J9fagCBdXvftDA2MRjOFQC5Xdv53A/hjj61N/aN7/0DD/4ELUA0y2E4mAfeJTKPm/iPX8KuUAQS6pepEzf2eqccF7hQM9s02HVb10wbBGkTCybLlcBscj2p9zbR3cBhlB2EgnBxT44lj3bc5ZtzE9z/AJFADf7Rvf8AoGH/AMCFqGTV71JlzYxLGqkyBrlQwz938OtW6p3OmW108jyh8yKFbDY4BB/oPyoAn/tG+/6Bh/8AAhaDqV6ASdNwB1JuFqWmyRrLE8b/AHXUqfoaAK8GrXzghrGJ35YeXcr9wk7T+WKl/tG9/wCgYf8AwIWorfT7e1m82MNv8sR5LZ4Bz+dWqAIJL++cKpskhQuod3mUgLnngd/Sp6ZLEk0ZRxlSQfyOR/Kn0AFFFFABRRRQAUUUUAFFFFABRRRQAUxlcSb43CnG07lz/UUUUAQNZqzl2itS5OSxg5J6etCWaRsGSK1Vl6EQYx+vvRRQANZozBmitSR0Jg9sevoAKm2yM6mR1IU5AVcc4x6n1oooAkooooAKKKKACiiigAooooAKKKKACiiigD//2Q==</Thumbnail>
+</MATLABApp>

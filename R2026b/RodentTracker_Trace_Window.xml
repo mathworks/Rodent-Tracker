@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<MATLABApp schemaVersion='1.0.0' release='R2026b.0' minRelease='R2026b'>
+    <UIFigure name='RodentTrackerTraceUIFigure'>
+        <CloseRequestFcn>RodentTrackerTraceUIFigureCloseRequest</CloseRequestFcn>
+        <HandleVisibility>'on'</HandleVisibility>
+        <Icon>'RodentTrackerIcon.png'</Icon>
+        <Name>'Rodent Tracker: Trace'</Name>
+        <Position>[100 100 497 420]</Position>
+        <Children>
+            <Menu name='FileMenu'>
+                <Text>'File'</Text>
+                <Children>
+                    <Menu name='SaveasMenu'>
+                        <MenuSelectedFcn>SaveasMenuSelected</MenuSelectedFcn>
+                        <Text>'Save as...'</Text>
+                    </Menu>
+                </Children>
+            </Menu>
+            <Menu name='EditMenu'>
+                <Text>'Edit'</Text>
+                <Children>
+                    <Menu name='ColorMenu'>
+                        <MenuSelectedFcn>ColorMenuSelected</MenuSelectedFcn>
+                        <Text>'Color'</Text>
+                    </Menu>
+                    <Menu name='ClearTraceMenu'>
+                        <MenuSelectedFcn>ClearTraceMenuSelected</MenuSelectedFcn>
+                        <Text>'Clear Trace'</Text>
+                    </Menu>
+                </Children>
+            </Menu>
+            <UIAxes name='UIAxes'>
+                <Color>[0 0 0]</Color>
+                <PlotBoxAspectRatio>[1 1 1]</PlotBoxAspectRatio>
+                <Position>[1 2 497 419]</Position>
+                <TickDir>'none'</TickDir>
+                <Toolbar>
+                    <Visible>'off'</Visible>
+                </Toolbar>
+                <XLim>[0 255]</XLim>
+                <XTick>[]</XTick>
+                <YLim>[0 255]</YLim>
+                <YTick>[]</YTick>
+                <ZLimMode>'manual'</ZLimMode>
+                <ZTick>[]</ZTick>
+            </UIAxes>
+        </Children>
+    </UIFigure>
+    <RunConfiguration>
+        <StartupFcn>startupFcn</StartupFcn>
+    </RunConfiguration>
+    <AppDetails>
+        <Name>Rodent Tracker: Trace</Name>
+        <Version>1.0</Version>
+    </AppDetails>
+    <InternalData>
+        <AppId>c87f1d6e-0686-4c33-aa1c-a47eb1ce3b0b</AppId>
+    </InternalData>
+    <!-- Thumbnail is used by file previewers. To change how the thumbnail is captured or stored, use the App Details dialog box in App Designer. -->
+    <Thumbnail autoCapture='true'>data:image/jpg;base64,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</Thumbnail>
+</MATLABApp>
